@@ -170,12 +170,12 @@ public:
 
     /* Event handlers */
     bool cursorPosCallbackEvent(double x, double y);
-    bool mouseButtonCallbackEvent(int button, int action, int modifiers);
+    virtual bool mouseButtonCallbackEvent(int button, int action, int modifiers);
     bool keyCallbackEvent(int key, int scancode, int action, int mods);
     bool charCallbackEvent(unsigned int codepoint);
-    bool dropCallbackEvent(int count, const char **filenames);
-    bool scrollCallbackEvent(double x, double y);
-    bool resizeCallbackEvent(int width, int height);
+    virtual bool dropCallbackEvent(int count, const char **filenames);
+    virtual bool scrollCallbackEvent(double x, double y);
+    virtual bool resizeCallbackEvent(int width, int height);
 
     /* Internal helper functions */
     void updateFocus(Widget *widget);
